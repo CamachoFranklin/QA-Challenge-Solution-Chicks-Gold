@@ -105,3 +105,4 @@ C:\Users\corre\OneDrive\Documents\GitHub\QA-Challenge-Solution-Chicks-Gold\qa-ap
 C:\Users\corre\OneDrive\Documents\GitHub\QA-Challenge-Solution-Chicks-Gold\qa-api\obj\Debug\net8.0\qa-api.pdb
 C:\Users\corre\OneDrive\Documents\GitHub\QA-Challenge-Solution-Chicks-Gold\qa-api\obj\Debug\net8.0\qa-api.genruntimeconfig.cache
 C:\Users\corre\OneDrive\Documents\GitHub\QA-Challenge-Solution-Chicks-Gold\qa-api\obj\Debug\net8.0\ref\qa-api.dll
+C:\Users\corre\OneDrive\Documents\GitHub\QA-Challenge-Solution-Chicks-Gold\qa-api\obj\Debug\net8.0\qa-api.sourcelink.json

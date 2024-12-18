@@ -1,0 +1,573 @@
+{
+	"info": {
+		"_postman_id": "eefa1dee-0273-4882-b88e-66d0f070bf68",
+		"name": "Orders_ManualRequests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20979166",
+		"_collection_link": "https://interstellar-comet-375398.postman.co/workspace/QA-Challenge-Solution---Frankli~dc400011-0df5-4ede-a037-a1b9aeaa0094/collection/20979166-eefa1dee-0273-4882-b88e-66d0f070bf68?action=share&source=collection_link&creator=20979166"
+	},
+	"item": [
+		{
+			"name": "BE-TC-Orders001 - View all orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/api/Order",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Orders002 - Search for an order using an existing ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/api/Order/{{order_id}}",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Order",
+						"{{order_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Orders003 - Search an order for a non-existent ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/api/Order/{{invalid_id}}",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Order",
+						"{{invalid_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Orders004 - Search order with invalid ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/api/Order/{{invalid_id}}",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Order",
+						"{{invalid_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Orders005 - Create order with valid data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"productName\": \"Sample Product\",\r\n    \"quantity\": 5,\r\n    \"status\": \"Pending\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/Order",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Orders006 - Create order with empty productName",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"productName\": \"\",\r\n    \"quantity\": 5,\r\n    \"status\": \"Pending\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/Order",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Orders007 - Create order with quantity at 0",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 3,\r\n    \"productName\": \"Sample Product\",\r\n    \"quantity\": 0,\r\n    \"status\": \"Pending\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/Order",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Orders008 - Create order with negative quantity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 4,\r\n    \"productName\": \"Sample Product\",\r\n    \"quantity\": -1,\r\n    \"status\": \"Pending\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/Order",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Orders009 - Create order with empty status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 5,\r\n    \"productName\": \"Sample Product\",\r\n    \"quantity\": 5,\r\n    \"status\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/Order",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Orders010 - Create order with duplicate ID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 6,\r\n    \"productName\": \"Sample Product\",\r\n    \"quantity\": 5,\r\n    \"status\": \"Pending\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/Order",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Orders011 - Create order with all empty fields",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 7,\r\n    \"productName\": \"\",\r\n    \"quantity\": 0,\r\n    \"status\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/Order",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Orders012 - Create order with incorrect data type",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 8,\r\n    \"productName\": \"Sample Product\",\r\n    \"quantity\": \"Five\",\r\n    \"status\": \"Pending\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/Order",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Orders013 - Update order with valid data",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"productName\": \"Updated Product\",\r\n    \"quantity\": 10,\r\n    \"status\": \"Shipped\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/Order/1",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Orders014 - Update the ID of an order",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"productName\": \"New Product\",\r\n    \"quantity\": 15,\r\n    \"status\": \"Pending\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/Order/1",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Orders015 - Update order with empty productName",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"productName\": \"\",\r\n    \"quantity\": 10,\r\n    \"status\": \"Shipped\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/Order/1",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Orders016 - Update order with quantity at 0",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"productName\": \"Updated Product\",\r\n    \"quantity\": 0,\r\n    \"status\": \"Shipped\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/Order/1",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Orders017 - Update order with negative quantity",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"productName\": \"Updated Product\",\r\n    \"quantity\": -5,\r\n    \"status\": \"Shipped\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/Order/1",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Orders018 - Update order with empty status",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"productName\": \"Updated Product\",\r\n    \"quantity\": 10,\r\n    \"status\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/Order/1",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Orders019 - Update order with non-existent ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 999,\r\n    \"productName\": \"Non-existent Product\",\r\n    \"quantity\": 1,\r\n    \"status\": \"Pending\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/Order/1",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Orders020 - Update order with all fields empty",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"productName\": \"\",\r\n    \"quantity\": 0,\r\n    \"status\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/Order/1",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Orders021 - Update order with incorrect data type",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"productName\": \"Updated Product\",\r\n    \"quantity\": \"Ten\",\r\n    \"status\": \"Shipped\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/Order/1",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Orders022 - Delete order with existing ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/api/Order/{{order_id}}",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Order",
+						"{{order_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
