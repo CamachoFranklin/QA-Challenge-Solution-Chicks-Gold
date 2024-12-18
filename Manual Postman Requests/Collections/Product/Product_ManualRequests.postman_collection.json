@@ -1,0 +1,345 @@
+{
+	"info": {
+		"_postman_id": "7c5e4be4-37f6-4a64-a0a0-86ce5691c860",
+		"name": "Product_ManualRequests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20979166",
+		"_collection_link": "https://interstellar-comet-375398.postman.co/workspace/QA-Challenge-Solution---Frankli~dc400011-0df5-4ede-a037-a1b9aeaa0094/collection/20979166-7c5e4be4-37f6-4a64-a0a0-86ce5691c860?action=share&source=collection_link&creator=20979166"
+	},
+	"item": [
+		{
+			"name": "BE-TC-Prod001: Create Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Test Product\",\r\n    \"price\": 100\r\n}"
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/Product",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Prod002: Consult Product List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{BaseURL}}/api/Product",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Prod003: Create Product with Existing ID",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Test Product\",\r\n    \"price\": 100\r\n}"
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/Product",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Prod004: Browse Product by ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{BaseURL}}/api/Product/1",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Prod005: Edit Product by ID",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Updated Product\",\r\n    \"price\": 150\r\n}"
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/Product/1",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Prod006: Delete Product by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{BaseURL}}/api/Product/1",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Prod007: Product Update with Nonexistent ID",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 999,\r\n    \"name\": \"Nonexistent Product\",\r\n    \"price\": 200\r\n}"
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/Product/999",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Product",
+						"999"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Prod008: Elimination of Product with Nonexistent ID",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{BaseURL}}/api/Product/999",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Product",
+						"999"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Prod009: Create Product with Missing Data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"\",\r\n    \"price\": 0\r\n}"
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/Product",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Prod010: Create Product with Invalid Data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 3,\r\n    \"name\": \"Invalid Product\",\r\n    \"price\": -50\r\n}"
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/Product",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Prod011: Product Price Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Product Name\",\r\n    \"price\": 300\r\n}"
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/Product/1",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Prod012: Product Deletion with Invalid ID",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{BaseURL}}/api/Product/abc123",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Product",
+						"abc123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BE-TC-Prod013: Empty Product List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{BaseURL}}/api/Product",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Product"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

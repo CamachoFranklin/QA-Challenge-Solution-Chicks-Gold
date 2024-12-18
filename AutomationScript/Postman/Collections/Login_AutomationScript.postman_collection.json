@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "3ff3e69a-cf5f-4a95-a08c-db7e59ad9af9",
+		"name": "Login_AutomationScript",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20979166",
+		"_collection_link": "https://interstellar-comet-375398.postman.co/workspace/QA-Challenge-Solution---Frankli~dc400011-0df5-4ede-a037-a1b9aeaa0094/collection/20979166-3ff3e69a-cf5f-4a95-a08c-db7e59ad9af9?action=share&source=collection_link&creator=20979166"
+	},
+	"item": [
+		{
+			"name": "LoginPOST_AutomationScript",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Extract data from the response and from the dataset\r",
+							"const statusCode = pm.response.code;\r",
+							"const jsonData = pm.response.json();\r",
+							"const responseTime = pm.response.responseTime;\r",
+							"const title = pm.iterationData.get(\"title\");\r",
+							"const username = pm.iterationData.get(\"username\");\r",
+							"const password = pm.iterationData.get(\"password\");\r",
+							"\r",
+							"// Case: Validate response time\r",
+							"pm.test(`[${title}] Response time should be less than 200ms`, function () {\r",
+							"    pm.expect(responseTime).to.be.below(200);\r",
+							"});\r",
+							"\r",
+							"// Case: Valid credentials\r",
+							"if (username === \"testuser\" && password === \"password\") {\r",
+							"    pm.test(`[${title}] Successful login`, function () {\r",
+							"        pm.expect(statusCode).to.equal(200);\r",
+							"    });\r",
+							"    pm.test(`[${title}] Token is present`, function () {\r",
+							"        pm.expect(jsonData).to.have.property(\"token\").that.is.a(\"string\");\r",
+							"    });\r",
+							"}\r",
+							"// Case: Invalid or incomplete credentials\r",
+							"else {\r",
+							"    pm.test(`[${title}] Login failed: Invalid or incomplete credentials`, function () {\r",
+							"        pm.expect(statusCode).to.equal(401);\r",
+							"    });\r",
+							"    pm.test(`[${title}] Token should not be present`, function () {\r",
+							"        pm.expect(jsonData).to.not.have.property(\"token\");\r",
+							"    });\r",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"{{username}}\",\r\n  \"password\": \"{{password}}\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/User/login",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"User",
+						"login"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\r\n  'http://localhost:5044/api/User/login' \\\r\n  -H 'accept: */*' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n  \"username\": \"testuser\",\r\n  \"password\": \"password\"\r\n}'"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

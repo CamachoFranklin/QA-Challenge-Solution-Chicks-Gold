@@ -1,0 +1,62 @@
+[
+  {
+    "title": "TC-Prod001: Create a valid product",
+    "id": 1,
+    "name": "Product A",
+    "price": 100
+  },
+  {
+    "title": "TC-Prod002: Create a product with missing name",
+    "id": 2,
+    "name": "",
+    "price": 50
+  },
+  {
+    "title": "TC-Prod003: Create a product with missing price",
+    "id": 3,
+    "name": "Product C",
+    "price": null
+  },
+  {
+    "title": "TC-Prod004: Create a product with missing id",
+    "id": null,
+    "name": "Product D",
+    "price": 75
+  },
+  {
+    "title": "TC-Prod005: Create a product with negative price",
+    "id": 4,
+    "name": "Product E",
+    "price": -20
+  },
+  {
+    "title": "TC-Prod006: Create a product with duplicate ID",
+    "id": 1,
+    "name": "Duplicate Product",
+    "price": 100
+  },
+  {
+    "title": "TC-Prod007: Create a product with special characters in name",
+    "id": 5,
+    "name": "Product@123",
+    "price": 60
+  },
+  {
+    "title": "TC-Prod008: Create a product with long name",
+    "id": 6,
+    "name": "This is a very long product name exceeding typical length limits",
+    "price": 45
+  },
+  {
+    "title": "TC-Prod009: Create a product with price as zero",
+    "id": 7,
+    "name": "Free Product",
+    "price": 0
+  },
+  {
+    "title": "TC-Prod010: Create a product with price as a string",
+    "id": 8,
+    "name": "Invalid Price Product",
+    "price": "ten"
+  }
+]

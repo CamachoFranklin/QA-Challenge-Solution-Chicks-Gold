@@ -1,0 +1,281 @@
+{
+	"id": "149b7bfd-6d4c-48f9-af1a-0158ed8e6a43",
+	"name": "Login",
+	"timestamp": "2024-12-17T15:42:28.190Z",
+	"collection_id": "20979166-3ff3e69a-cf5f-4a95-a08c-db7e59ad9af9",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 39,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-12-17T15:42:26.316Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "08958527-4c1d-49ca-9927-2ae93560b144",
+			"name": "TC001 - Login",
+			"url": "http://localhost:5044/api/User/login",
+			"time": 4,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"[TC-Login013: Password with uppercase letters and normal username] Response time should be less than 200ms": true,
+				"[TC-Login013: Password with uppercase letters and normal username] Login failed: Invalid or incomplete credentials": true,
+				"[TC-Login013: Password with uppercase letters and normal username] Token should not be present": true
+			},
+			"testPassFailCounts": {
+				"[TC-Login001: Valid credentials] Response time should be less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login001: Valid credentials] Successful login": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login001: Valid credentials] Token is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login002: Invalid username with valid password] Response time should be less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login002: Invalid username with valid password] Login failed: Invalid or incomplete credentials": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login002: Invalid username with valid password] Token should not be present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login003: Valid username with invalid password] Response time should be less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login003: Valid username with invalid password] Login failed: Invalid or incomplete credentials": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login003: Valid username with invalid password] Token should not be present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login004: Both username and password invalid] Response time should be less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login004: Both username and password invalid] Login failed: Invalid or incomplete credentials": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login004: Both username and password invalid] Token should not be present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login005: Both fields empty] Response time should be less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login005: Both fields empty] Login failed: Invalid or incomplete credentials": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login005: Both fields empty] Token should not be present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login006: Empty username, valid password] Response time should be less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login006: Empty username, valid password] Login failed: Invalid or incomplete credentials": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login006: Empty username, valid password] Token should not be present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login007: Empty username, invalid password] Response time should be less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login007: Empty username, invalid password] Login failed: Invalid or incomplete credentials": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login007: Empty username, invalid password] Token should not be present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login008: Valid username, empty password] Response time should be less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login008: Valid username, empty password] Login failed: Invalid or incomplete credentials": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login008: Valid username, empty password] Token should not be present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login009: Invalid username, empty password] Response time should be less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login009: Invalid username, empty password] Login failed: Invalid or incomplete credentials": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login009: Invalid username, empty password] Token should not be present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login010: Password with special characters and normal username] Response time should be less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login010: Password with special characters and normal username] Login failed: Invalid or incomplete credentials": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login010: Password with special characters and normal username] Token should not be present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login011: Username with special characters and normal password] Response time should be less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login011: Username with special characters and normal password] Login failed: Invalid or incomplete credentials": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login011: Username with special characters and normal password] Token should not be present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login012: Username with uppercase letters and normal password] Response time should be less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login012: Username with uppercase letters and normal password] Login failed: Invalid or incomplete credentials": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login012: Username with uppercase letters and normal password] Token should not be present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login013: Password with uppercase letters and normal username] Response time should be less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login013: Password with uppercase letters and normal username] Login failed: Invalid or incomplete credentials": {
+					"pass": 1,
+					"fail": 0
+				},
+				"[TC-Login013: Password with uppercase letters and normal username] Token should not be present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				66,
+				25,
+				5,
+				42,
+				7,
+				3,
+				3,
+				3,
+				5,
+				4,
+				2,
+				3,
+				4
+			],
+			"allTests": [
+				{
+					"[TC-Login001: Valid credentials] Response time should be less than 200ms": true,
+					"[TC-Login001: Valid credentials] Successful login": true,
+					"[TC-Login001: Valid credentials] Token is present": true
+				},
+				{
+					"[TC-Login002: Invalid username with valid password] Response time should be less than 200ms": true,
+					"[TC-Login002: Invalid username with valid password] Login failed: Invalid or incomplete credentials": true,
+					"[TC-Login002: Invalid username with valid password] Token should not be present": true
+				},
+				{
+					"[TC-Login003: Valid username with invalid password] Response time should be less than 200ms": true,
+					"[TC-Login003: Valid username with invalid password] Login failed: Invalid or incomplete credentials": true,
+					"[TC-Login003: Valid username with invalid password] Token should not be present": true
+				},
+				{
+					"[TC-Login004: Both username and password invalid] Response time should be less than 200ms": true,
+					"[TC-Login004: Both username and password invalid] Login failed: Invalid or incomplete credentials": true,
+					"[TC-Login004: Both username and password invalid] Token should not be present": true
+				},
+				{
+					"[TC-Login005: Both fields empty] Response time should be less than 200ms": true,
+					"[TC-Login005: Both fields empty] Login failed: Invalid or incomplete credentials": true,
+					"[TC-Login005: Both fields empty] Token should not be present": true
+				},
+				{
+					"[TC-Login006: Empty username, valid password] Response time should be less than 200ms": true,
+					"[TC-Login006: Empty username, valid password] Login failed: Invalid or incomplete credentials": true,
+					"[TC-Login006: Empty username, valid password] Token should not be present": true
+				},
+				{
+					"[TC-Login007: Empty username, invalid password] Response time should be less than 200ms": true,
+					"[TC-Login007: Empty username, invalid password] Login failed: Invalid or incomplete credentials": true,
+					"[TC-Login007: Empty username, invalid password] Token should not be present": true
+				},
+				{
+					"[TC-Login008: Valid username, empty password] Response time should be less than 200ms": true,
+					"[TC-Login008: Valid username, empty password] Login failed: Invalid or incomplete credentials": true,
+					"[TC-Login008: Valid username, empty password] Token should not be present": true
+				},
+				{
+					"[TC-Login009: Invalid username, empty password] Response time should be less than 200ms": true,
+					"[TC-Login009: Invalid username, empty password] Login failed: Invalid or incomplete credentials": true,
+					"[TC-Login009: Invalid username, empty password] Token should not be present": true
+				},
+				{
+					"[TC-Login010: Password with special characters and normal username] Response time should be less than 200ms": true,
+					"[TC-Login010: Password with special characters and normal username] Login failed: Invalid or incomplete credentials": true,
+					"[TC-Login010: Password with special characters and normal username] Token should not be present": true
+				},
+				{
+					"[TC-Login011: Username with special characters and normal password] Response time should be less than 200ms": true,
+					"[TC-Login011: Username with special characters and normal password] Login failed: Invalid or incomplete credentials": true,
+					"[TC-Login011: Username with special characters and normal password] Token should not be present": true
+				},
+				{
+					"[TC-Login012: Username with uppercase letters and normal password] Response time should be less than 200ms": true,
+					"[TC-Login012: Username with uppercase letters and normal password] Login failed: Invalid or incomplete credentials": true,
+					"[TC-Login012: Username with uppercase letters and normal password] Token should not be present": true
+				},
+				{
+					"[TC-Login013: Password with uppercase letters and normal username] Response time should be less than 200ms": true,
+					"[TC-Login013: Password with uppercase letters and normal username] Login failed: Invalid or incomplete credentials": true,
+					"[TC-Login013: Password with uppercase letters and normal username] Token should not be present": true
+				}
+			]
+		}
+	],
+	"count": 13,
+	"totalTime": 172,
+	"collection": {
+		"requests": [
+			{
+				"id": "08958527-4c1d-49ca-9927-2ae93560b144",
+				"method": "POST"
+			}
+		]
+	}
+}

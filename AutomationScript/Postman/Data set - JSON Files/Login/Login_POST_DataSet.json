@@ -1,0 +1,15 @@
+[
+  { "title": "TC-Login001: Valid credentials", "username": "testuser", "password": "password" },
+  { "title": "TC-Login002: Invalid username with valid password", "username": "wrongusername", "password": "password" },
+  { "title": "TC-Login003: Valid username with invalid password", "username": "testuser", "password": "wrongpassword" },
+  { "title": "TC-Login004: Both username and password invalid", "username": "wrongusername", "password": "wrongpassword" },
+  { "title": "TC-Login005: Both fields empty", "username": "", "password": "" },
+  { "title": "TC-Login006: Empty username, valid password", "username": "", "password": "password" },
+  { "title": "TC-Login007: Empty username, invalid password", "username": "", "password": "wrongpassword" },
+  { "title": "TC-Login008: Valid username, empty password", "username": "testuser", "password": "" },
+  { "title": "TC-Login009: Invalid username, empty password", "username": "wrongusername", "password": "" },
+  { "title": "TC-Login010: Password with special characters and normal username", "username": "testuser", "password": "password!@#" },
+  { "title": "TC-Login011: Username with special characters and normal password", "username": "testuser!@#", "password": "password" },
+  { "title": "TC-Login012: Username with uppercase letters and normal password", "username": "TestUser", "password": "password" },
+  { "title": "TC-Login013: Password with uppercase letters and normal username", "username": "testuser", "password": "Password" }
+]

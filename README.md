@@ -1,2 +1,2 @@
-# QA-Challenge-Solution-Chicks-Gold
+# QA Challenge Solution
  
