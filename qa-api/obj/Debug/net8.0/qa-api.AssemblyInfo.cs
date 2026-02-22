@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("qa-api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ce92c5b601d9aa12c39aef7e487017be1b4bee9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c64a27f0f3727737a2a41f4280d3f144751a17c2")]
 [assembly: System.Reflection.AssemblyProductAttribute("qa-api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("qa-api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
